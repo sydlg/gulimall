@@ -8,15 +8,15 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * spu图片
+ * sku销售属性&值
  * 
  * @author chenqi
  * @email qic19971225@gmail.com
  * @date 2020-08-19 16:17:35
  */
 @Data
-@TableName("pms_spu_images")
-public class SpuImagesEntity implements Serializable {
+@TableName("pms_sku_sale_attr_value")
+public class SkuSaleAttrValueEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -27,22 +27,22 @@ public class SpuImagesEntity implements Serializable {
 	/**
 	 * $column.comments
 	 */
-	private Long spuId;
+	private Long skuId;
 	/**
 	 * $column.comments
 	 */
-	private String imgName;
+	private Long attrId;
 	/**
 	 * $column.comments
 	 */
-	private String imgUrl;
+	private String attrName;
 	/**
 	 * $column.comments
 	 */
-	private Integer imgSort;
+	private String attrValue;
 	/**
 	 * $column.comments
 	 */
-	private Integer defaultImg;
+	private Integer attrSort;
 
 }
