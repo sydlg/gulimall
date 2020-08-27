@@ -49,7 +49,7 @@ public class CategoryController {
     public R info(@PathVariable("catId") Long catId){
 		CategoryEntity category = categoryService.getById(catId);
 
-        return R.ok().put("category", category);
+        return R.ok().put("data", category);
     }
 
     /**
@@ -77,8 +77,10 @@ public class CategoryController {
      */
     @RequestMapping("/delete")
     public R delete(@RequestBody Long[] catIds){
-		categoryService.removeByIds(Arrays.asList(catIds));
-
+        // 通过id删除
+//		categoryService.removeByIds(Arrays.asList(catIds));
+        // 批量删除
+        categoryService.removeMenuByIds(Arrays.asList(catIds));
         return R.ok();
     }
 
